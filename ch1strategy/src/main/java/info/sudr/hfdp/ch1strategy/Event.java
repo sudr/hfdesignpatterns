@@ -1,5 +1,5 @@
 package info.sudr.hfdp.ch1strategy;
 
-public class Sample {
-
+public enum Event {
+	QUACK, SWIM
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" output="build/classes/main" path="src/main/java"/>
+	<classpathentry kind="src" output="build/classes/main" path="src/main/resources"/>
 	<classpathentry kind="src" output="build/classes/test" path="src/test/java"/>
 	<classpathentry kind="src" output="build/classes/test" path="src/test/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
@@ -20,7 +22,5 @@
 	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.testng/testng/jars/testng-5.12.1.jar"/>
-	<classpathentry kind="src" output="build/classes/main" path="src/main/resources"/>
-	<classpathentry kind="src" output="build/classes/main" path="src/main/java"/>
 	<classpathentry kind="output" path="build/classes/main"/>
 </classpath>
