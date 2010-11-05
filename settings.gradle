@@ -1,1 +1,1 @@
-include "ch1strategy"
+include 'ch1strategy', 'ch2observer'
