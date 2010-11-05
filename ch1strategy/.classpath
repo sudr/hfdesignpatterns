@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="build/classes/main" path="src/main/java"/>
+	<classpathentry kind="src" output="build/classes/main" path="src/main/resources"/>
+	<classpathentry kind="src" output="build/classes/test" path="src/test/java"/>
+	<classpathentry kind="src" output="build/classes/test" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/antlr/antlr/jars/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/asm/asm-analysis/jars/asm-analysis-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/asm/asm-commons/jars/asm-commons-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/asm/asm-tree/jars/asm-tree-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/asm/asm-util/jars/asm-util-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/asm/asm/jars/asm-3.2.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/commons-cli/commons-cli/jars/commons-cli-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/commons-lang/commons-lang/jars/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/junit/junit/jars/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/log4j/log4j/bundles/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.codehaus.groovy/groovy-all/jars/groovy-all-1.7.5.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.codehaus.groovy/groovy/jars/groovy-1.7.5.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.easyb/easyb/jars/easyb-0.9.8.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.5.6.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/sud/.gradle/cache/org.testng/testng/jars/testng-5.12.1.jar"/>
+	<classpathentry kind="output" path="build/classes/main"/>
+</classpath>
