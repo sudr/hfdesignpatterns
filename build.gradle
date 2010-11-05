@@ -59,7 +59,7 @@ subprojects {
         		// instrument the relevant classes in-place
         		'cobertura-instrument'(datafile:cobSerFile) {
             			fileset(dir: srcOriginal,
-                   		includes:"my/classes/**/*.class",
+                   		includes:"build/classes/**/*.class",
                    		excludes:"**/*Test.class")
         		}
     		}

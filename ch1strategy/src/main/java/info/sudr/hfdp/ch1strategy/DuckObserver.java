@@ -10,6 +10,10 @@ import java.util.Observer;
 public class DuckObserver implements Observer {
 
 	private Map<Observable, Collection<Event>> duckEvents = new HashMap<Observable, Collection<Event>>();
+	
+	public DuckObserver(Observable obsevrable) {
+		obsevrable.addObserver(this);
+	}
 
 	public boolean awareOfEvent(Duck duck, Event event) {
 		Collection<Event> awareEvents = duckEvents.get(duck);
@@ -23,4 +27,5 @@ public class DuckObserver implements Observer {
 		}
 		duckEvents.get(duck).add((Event) event);
 	}
+	
 }

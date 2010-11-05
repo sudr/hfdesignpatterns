@@ -3,8 +3,7 @@ package info.sudr.hfdp.ch1strategy
 shared_behavior "shared behaviors", {
 	given "a duck and a duck observer", {
 		duck = new MallardDuck("fred")
-		duckObserver = new DuckObserver()
-		duck.addObserver(duckObserver)
+		duckObserver = new DuckObserver(duck)
 	}
 }
 
