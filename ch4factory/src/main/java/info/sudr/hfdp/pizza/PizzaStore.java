@@ -4,9 +4,15 @@ import info.sudr.hfdp.pizza.Pizza.Type;
 
 public class PizzaStore {
 
+	private SimplePizzaFactory factory;
+	
+	public PizzaStore(SimplePizzaFactory factory) {
+		this.factory = factory;
+	}
+	
 	public Pizza orderPizza(Type type) {
 		System.out.println("ordering " + type + " pizza");
-		Pizza pizza = createPizza(type);
+		Pizza pizza = factory.createPizza(type);
 		
 		pizza.prepare();
 		pizza.bake();
@@ -14,18 +20,5 @@ public class PizzaStore {
 		pizza.box();
 		
 		return pizza;
-	}
-
-	private Pizza createPizza(Type type) {
-		switch (type) {
-		case CHEESE:
-			return new CheesePizza();
-		case GREEK:
-			return new GreekPizza();
-		case PEPPERONI:
-			return new PepperoniPizza();
-		default:
-			throw new RuntimeException("we do not have " + type + " pizzas");
-		}
 	}
 }

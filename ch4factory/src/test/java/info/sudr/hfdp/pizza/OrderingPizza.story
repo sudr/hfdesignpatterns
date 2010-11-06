@@ -2,7 +2,7 @@ package info.sudr.hfdp.pizza
 
 scenario "order a cheese pizza", {
 	given "a pizza store", {
-		store = new PizzaStore()
+		store = new PizzaStore(new SimplePizzaFactory())
 	}
 	
 	when "we order a cheese pizza", {
@@ -16,7 +16,7 @@ scenario "order a cheese pizza", {
 
 scenario "order a greek pizza", {
 	given "a pizza store", {
-		store = new PizzaStore()
+		store = new PizzaStore(new SimplePizzaFactory())
 	}
 	
 	when "we order a greek pizza", {
@@ -30,7 +30,7 @@ scenario "order a greek pizza", {
 
 scenario "order a pepperoni pizza", {
 	given "a pizza store", {
-		store = new PizzaStore()
+		store = new PizzaStore(new SimplePizzaFactory())
 	}
 	
 	when "we order a pepperoni pizza", {
