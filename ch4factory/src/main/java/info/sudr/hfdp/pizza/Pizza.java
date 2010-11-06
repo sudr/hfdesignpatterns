@@ -5,7 +5,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 public abstract class Pizza {
 
 	public enum Type {
-		CHEESE, GREEK, PEPPERONI
+		CHEESE, CLAM, PEPPERONI, VEGGIE
 	}
 
 	protected Type type;

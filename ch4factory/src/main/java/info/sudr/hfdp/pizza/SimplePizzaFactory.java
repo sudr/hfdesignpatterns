@@ -8,10 +8,12 @@ public class SimplePizzaFactory {
 		switch (type) {
 		case CHEESE:
 			return new CheesePizza();
-		case GREEK:
-			return new GreekPizza();
+		case CLAM:
+			return new ClamPizza();
 		case PEPPERONI:
 			return new PepperoniPizza();
+		case VEGGIE:
+			return new VeggiePizza();
 		default:
 			throw new RuntimeException("we do not have " + type + " pizzas");
 		}
