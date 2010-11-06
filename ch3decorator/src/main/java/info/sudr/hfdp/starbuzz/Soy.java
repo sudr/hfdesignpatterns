@@ -1,27 +1,27 @@
-package info.sudr.hfdp.ch3decorator;
+package info.sudr.hfdp.starbuzz;
 
 import java.math.BigDecimal;
 
-public class Whip extends CondimentDecorator {
+public class Soy extends CondimentDecorator {
 
-	public Whip(Beverage beverage) {
+	public Soy(Beverage beverage) {
 		super(beverage);
 	}
 	
 	@Override
 	public String getDescription() {
-		return "Whip " + getBeverage().getDescription();
+		return "Soy " + getBeverage().getDescription();
 	}
-
+	
 	@Override
 	public BigDecimal getCost(Size size) {
 		switch (size) {
 		case TALL:
-			return BigDecimal.valueOf(0.5);
-		case GRANDE:
 			return BigDecimal.valueOf(0.10);
-		case VENTI:
+		case GRANDE:
 			return BigDecimal.valueOf(0.15);
+		case VENTI:
+			return BigDecimal.valueOf(0.20);
 		default:
 			throw new RuntimeException("unrecognized size");
 		}

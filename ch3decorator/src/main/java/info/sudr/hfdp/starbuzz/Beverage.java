@@ -1,4 +1,4 @@
-package info.sudr.hfdp.ch3decorator;
+package info.sudr.hfdp.starbuzz;
 
 import java.math.BigDecimal;
 

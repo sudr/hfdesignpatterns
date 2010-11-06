@@ -1,4 +1,4 @@
-package info.sudr.hfdp.ch3decorator
+package info.sudr.hfdp.starbuzz
 
 scenario "a double mocha dark roast coffee with whip", {
 	given "a dark roast grande beverage", {

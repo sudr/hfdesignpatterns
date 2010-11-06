@@ -1,12 +1,12 @@
-package info.sudr.hfdp.ch3decorator;
+package info.sudr.hfdp.starbuzz;
 
 import java.math.BigDecimal;
 
-public class HouseBlend extends Beverage {
+public class DarkRoast extends Beverage {
 
 	@Override
 	public String getDescription() {
-		return "House Blend";
+		return "Dark Roast";
 	}
 
 	@Override
@@ -15,9 +15,9 @@ public class HouseBlend extends Beverage {
 		case TALL:
 			return BigDecimal.valueOf(0.70);
 		case GRANDE:
-			return BigDecimal.valueOf(0.89);
-		case VENTI:
 			return BigDecimal.valueOf(0.99);
+		case VENTI:
+			return BigDecimal.valueOf(1.10);
 		default:
 			throw new RuntimeException("unrecognized size");
 		}
