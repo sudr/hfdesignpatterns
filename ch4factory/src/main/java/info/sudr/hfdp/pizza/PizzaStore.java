@@ -1,6 +1,7 @@
 package info.sudr.hfdp.pizza;
 
 import info.sudr.hfdp.pizza.Pizza.Type;
+import info.sudr.hfdp.pizza.factory.SimplePizzaFactory;
 
 public class PizzaStore {
 

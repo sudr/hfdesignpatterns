@@ -1,8 +1,10 @@
 package info.sudr.hfdp.pizza
 
+import info.sudr.hfdp.pizza.factory.*;
+
 shared_behavior "pizza store", {
 	given "a pizza store", {
-		store = new PizzaStore(new SimplePizzaFactory())
+		store = new PizzaStore(new NYPizzaFactory())
 	}
 }
 
