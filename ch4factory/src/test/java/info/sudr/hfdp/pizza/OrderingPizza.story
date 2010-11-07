@@ -14,7 +14,7 @@ scenario "order a NY style cheese pizza", {
 	}
 	
 	then "we receive a NY style cheese pizza", {
-		pizza.name.shouldBeEqualTo "NY Style Sauce and Cheeze Pizza"
+		pizza.name.shouldBeEqualTo "New York Style Cheese Pizza"
 	}
 }
 
@@ -28,6 +28,6 @@ scenario "order a Chicago style cheese pizza", {
 	}
 	
 	then "we receive a Chicago style cheese pizza", {
-		pizza.name.shouldBeEqualTo "Chicago Style Deep Dish Cheeze Pizza"
+		pizza.name.shouldBeEqualTo "Chicago Style Cheese Pizza"
 	}
 }

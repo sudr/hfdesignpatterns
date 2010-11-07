@@ -1,7 +1,11 @@
 package info.sudr.hfdp.pizza;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import info.sudr.hfdp.pizza.ingredient.Cheese;
+import info.sudr.hfdp.pizza.ingredient.Clams;
+import info.sudr.hfdp.pizza.ingredient.Dough;
+import info.sudr.hfdp.pizza.ingredient.Pepperoni;
+import info.sudr.hfdp.pizza.ingredient.Sauce;
+import info.sudr.hfdp.pizza.ingredient.Veggies;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
@@ -12,28 +16,14 @@ public abstract class Pizza {
 	}
 
 	protected String name;
-	protected String dough;
-	protected String sauce;
-	protected Collection<String> toppings = new ArrayList<String>();
+	protected Dough dough;
+	protected Sauce sauce;
+	protected Veggies[] veggies;
+	protected Cheese cheese;
+	protected Pepperoni pepperoni;
+	protected Clams clam;
 
-	public Pizza() {
-	}
-
-	public Pizza(String name, String dough, String sauce) {
-		this.name = name;
-		this.dough = dough;
-		this.sauce = sauce;
-	}
-
-	public void prepare() {
-		System.out.println("preparing " + name);
-		System.out.println("tossing dough...");
-		System.out.println("adding sauce...");
-		System.out.println("adding toppings: ");
-		for (String topping : toppings) {
-			System.out.println("    " + topping);
-		}
-	}
+	public abstract void prepare();
 
 	public void bake() {
 		System.out.println("bake for 25 minutes at 350");
@@ -45,6 +35,10 @@ public abstract class Pizza {
 
 	public void box() {
 		System.out.println("place pizza in official PizzaStore box");
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public String getName() {
