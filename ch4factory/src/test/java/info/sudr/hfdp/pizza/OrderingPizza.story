@@ -1,69 +1,33 @@
 package info.sudr.hfdp.pizza
 
 import info.sudr.hfdp.pizza.factory.*;
+import info.sudr.hfdp.pizza.store.NYPizzaStore;
+import info.sudr.hfdp.pizza.store.ChicagoPizzaStore;
 
-shared_behavior "pizza store", {
-	given "a pizza store", {
-		store = new PizzaStore(new NYPizzaFactory())
+scenario "order a NY style cheese pizza", {
+	given "a NY pizza store", {
+		store = new NYPizzaStore()
 	}
-}
-
-scenario "order a cheese pizza", {
-	it_behaves_as "pizza store"
 	
 	when "we order a cheese pizza", {
 		pizza = store.orderPizza(Pizza.Type.CHEESE)
 	}
 	
-	then "we receive a cheese pizza", {
-		pizza.type.shouldBeEqualTo Pizza.Type.CHEESE
+	then "we receive a NY style cheese pizza", {
+		pizza.name.shouldBeEqualTo "NY Style Sauce and Cheeze Pizza"
 	}
 }
 
-scenario "order a clam pizza", {
-	it_behaves_as "pizza store"
-	
-	when "we order a clam pizza", {
-		pizza = store.orderPizza(Pizza.Type.CLAM)
+scenario "order a Chicago style cheese pizza", {
+	given "a Chicago pizza store", {
+		store = new ChicagoPizzaStore()
 	}
 	
-	then "we receive a clam pizza", {
-		pizza.type.shouldBeEqualTo Pizza.Type.CLAM
-	}
-}
-
-scenario "order a pepperoni pizza", {
-	it_behaves_as "pizza store"
-	
-	when "we order a pepperoni pizza", {
-		pizza = store.orderPizza(Pizza.Type.PEPPERONI)
+	when "we order a cheese pizza", {
+		pizza = store.orderPizza(Pizza.Type.CHEESE)
 	}
 	
-	then "we receive a pepperoni pizza", {
-		pizza.type.shouldBeEqualTo Pizza.Type.PEPPERONI
-	}
-}
-
-scenario "order a pepperoni pizza", {
-	it_behaves_as "pizza store"
-	
-	when "we order a pepperoni pizza", {
-		pizza = store.orderPizza(Pizza.Type.PEPPERONI)
-	}
-	
-	then "we receive a pepperoni pizza", {
-		pizza.type.shouldBeEqualTo Pizza.Type.PEPPERONI
-	}
-}
-
-scenario "order a veggie pizza", {
-	it_behaves_as "pizza store"
-	
-	when "we order a veggie pizza", {
-		pizza = store.orderPizza(Pizza.Type.VEGGIE)
-	}
-	
-	then "we receive a veggie pizza", {
-		pizza.type.shouldBeEqualTo Pizza.Type.VEGGIE
+	then "we receive a Chicago style cheese pizza", {
+		pizza.name.shouldBeEqualTo "Chicago Style Deep Dish Cheeze Pizza"
 	}
 }

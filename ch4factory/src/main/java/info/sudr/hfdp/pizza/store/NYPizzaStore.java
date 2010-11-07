@@ -1,4 +1,4 @@
-package info.sudr.hfdp.pizza.factory;
+package info.sudr.hfdp.pizza.store;
 
 import info.sudr.hfdp.pizza.Pizza;
 import info.sudr.hfdp.pizza.Pizza.Type;
@@ -7,9 +7,10 @@ import info.sudr.hfdp.pizza.ny.NYStyleClamPizza;
 import info.sudr.hfdp.pizza.ny.NYStylePepperoniPizza;
 import info.sudr.hfdp.pizza.ny.NYStyleVeggiePizza;
 
-public class NYPizzaFactory implements SimplePizzaFactory {
+public class NYPizzaStore extends PizzaStore {
 
-	public Pizza createPizza(Type type) {
+	@Override
+	protected Pizza createPizza(Type type) {
 		switch (type) {
 		case CHEESE:
 			return new NYStyleCheesePizza();
@@ -23,5 +24,4 @@ public class NYPizzaFactory implements SimplePizzaFactory {
 			throw new RuntimeException("we do not have " + type + " pizzas");
 		}
 	}
-
 }

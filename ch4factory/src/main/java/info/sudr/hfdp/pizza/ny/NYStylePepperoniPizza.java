@@ -1,7 +1,7 @@
 package info.sudr.hfdp.pizza.ny;
 
-import info.sudr.hfdp.pizza.PepperoniPizza;
+import info.sudr.hfdp.pizza.Pizza;
 
-public class NYStylePepperoniPizza extends PepperoniPizza {
+public class NYStylePepperoniPizza extends Pizza {
 
 }

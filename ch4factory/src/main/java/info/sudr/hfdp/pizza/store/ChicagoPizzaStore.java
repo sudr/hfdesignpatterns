@@ -1,15 +1,15 @@
-package info.sudr.hfdp.pizza.factory;
+package info.sudr.hfdp.pizza.store;
 
 import info.sudr.hfdp.pizza.Pizza;
 import info.sudr.hfdp.pizza.Pizza.Type;
-import info.sudr.hfdp.pizza.ny.chicago.ChicagoStyleCheesePizza;
-import info.sudr.hfdp.pizza.ny.chicago.ChicagoStyleClamPizza;
-import info.sudr.hfdp.pizza.ny.chicago.ChicagoStylePepperoniPizza;
-import info.sudr.hfdp.pizza.ny.chicago.ChicagoStyleVeggiePizza;
+import info.sudr.hfdp.pizza.chicago.ChicagoStyleCheesePizza;
+import info.sudr.hfdp.pizza.chicago.ChicagoStyleClamPizza;
+import info.sudr.hfdp.pizza.chicago.ChicagoStylePepperoniPizza;
+import info.sudr.hfdp.pizza.chicago.ChicagoStyleVeggiePizza;
 
-public class ChicagoPizzaFactory implements SimplePizzaFactory {
+public class ChicagoPizzaStore extends PizzaStore {
 
-	public Pizza createPizza(Type type) {
+	protected Pizza createPizza(Type type) {
 		switch (type) {
 		case CHEESE:
 			return new ChicagoStyleCheesePizza();
