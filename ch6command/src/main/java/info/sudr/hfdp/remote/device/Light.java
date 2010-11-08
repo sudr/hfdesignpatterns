@@ -11,7 +11,7 @@ public class Light {
 	public void off() {
 		on = false;
 	}
-	
+
 	public boolean isOn() {
 		return on;
 	}

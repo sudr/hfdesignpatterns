@@ -57,3 +57,32 @@ scenario "undo the last speed setting on a ceiling fan", {
 		ceilingFan.speed.shouldBeEqualTo CeilingFan.Speed.LOW
 	}
 }
+
+scenario "remote with party mode", {
+	given "a remote and party devices", {
+		remote = new RemoteControl()
+		light = new Light()
+		lightOn = new LightOnCommand(light)
+		lightOff = new LightOffCommand(light)
+		stereo = new Stereo()
+		stereoOn = new StereoOnCommand(stereo)
+		stereoOff = new StereoOffCommand(stereo)
+		
+		Command[] partyOn = [ lightOn, stereoOn ]
+		Command[] partyOff = [ lightOff, stereoOff ]
+		partyOnCommand = new MacroCommand(partyOn)
+		partyOffCommand = new MacroCommand(partyOff)
+		
+		remote.setCommand(0, partyOnCommand, partyOffCommand)
+	}
+	
+	when "we press the party button on", { remote.onButtonWasPushed(0) }
+	
+	then "the light is turned on", {
+		light.isOn().shouldBeEqualTo true
+	}
+	and
+	then "the stereo is turned on", {
+		stereo.isOn().shouldBeEqualTo true
+	}
+}
