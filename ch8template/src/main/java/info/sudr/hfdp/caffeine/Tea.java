@@ -2,18 +2,13 @@ package info.sudr.hfdp.caffeine;
 
 public class Tea extends CaffeineBeverage {
 
-	public void prepare() {
-		boilWater();
-		steepTeaBag();
-		pourInCup();
-		addLemon();
-	}
-
-	private void steepTeaBag() {
+	@Override
+	protected void brew() {
 		System.out.println("Steeping the tea");
 	}
-
-	private void addLemon() {
+	
+	@Override
+	protected void addCondiments() {
 		System.out.println("Adding lemon");
 	}
 }

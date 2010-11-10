@@ -3,20 +3,13 @@ package info.sudr.hfdp.caffeine;
 public class Coffee extends CaffeineBeverage {
 
 	@Override
-	public void prepare() {
-		boilWater();
-		brewCoffeeGrinds();
-		pourInCup();
-		addSugarAndMilk();
-	}
-
-	private void brewCoffeeGrinds() {
+	protected void brew() {
 		System.out.println("Dripping coffee through filter");
 	}
 
-	private void addSugarAndMilk() {
+	@Override
+	protected void addCondiments() {
 		System.out.println("Adding sugar and milk");
-
 	}
 
 }
