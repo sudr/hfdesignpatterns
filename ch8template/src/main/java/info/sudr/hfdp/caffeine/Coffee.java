@@ -1,5 +1,9 @@
 package info.sudr.hfdp.caffeine;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Coffee extends CaffeineBeverage {
 
 	@Override
@@ -16,5 +20,22 @@ public class Coffee extends CaffeineBeverage {
 	public void onComplete() {
 		System.out.println("Stirring coffee");
 	}
+	
+	@Override
+	protected boolean customerWantsCondiments() {
+		return getAnswer().toLowerCase().startsWith("y");
+	}
 
+	private String getAnswer() {
+		String answer = "no";
+		System.out.println("Would you like milk and sugar with your coffee (y/n)? ");
+		
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			answer = in.readLine();
+		} catch (IOException e) {
+			System.err.println("IO error trying to read your answer");
+		}
+		return answer;
+	}
 }
