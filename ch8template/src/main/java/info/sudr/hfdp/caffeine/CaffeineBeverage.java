@@ -11,6 +11,7 @@ public abstract class CaffeineBeverage {
 		brew();
 		pourInCup();
 		addCondiments();
+		onComplete();
 	}
 
 	protected abstract void brew();
@@ -24,5 +25,8 @@ public abstract class CaffeineBeverage {
 	}
 
 	protected abstract void addCondiments();
+	
+	public void onComplete() { //hook method
+	}
 
 }

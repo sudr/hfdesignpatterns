@@ -11,5 +11,10 @@ public class Coffee extends CaffeineBeverage {
 	protected void addCondiments() {
 		System.out.println("Adding sugar and milk");
 	}
+	
+	@Override
+	public void onComplete() {
+		System.out.println("Stirring coffee");
+	}
 
 }
