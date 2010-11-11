@@ -1,1 +1,1 @@
-include 'ch1strategy', 'ch2observer', 'ch3decorator', 'ch4factory', 'ch6command', 'ch7adapter', 'ch8template'
+include 'ch1strategy', 'ch2observer', 'ch3decorator', 'ch4factory', 'ch6command', 'ch7adapter', 'ch8template', 'ch9iterator'
