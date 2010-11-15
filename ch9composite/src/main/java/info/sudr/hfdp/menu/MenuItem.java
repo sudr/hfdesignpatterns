@@ -1,7 +1,9 @@
 package info.sudr.hfdp.menu;
 
-public class MenuItem extends MenuComponent {
+import java.util.Iterator;
 
+public class MenuItem extends MenuComponent {
+	
 	private final String name;
 	private final String description;
 	private final boolean vegetarian;
@@ -38,5 +40,10 @@ public class MenuItem extends MenuComponent {
 		}
 		System.out.println(", " + getPrice());
 		System.out.println("      -- " + getDescription());
+	}
+	
+	@Override
+	public Iterator<MenuComponent> createIterator() {
+		return new NullIterator<MenuComponent>();
 	}
 }

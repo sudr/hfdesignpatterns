@@ -1,11 +1,13 @@
 package info.sudr.hfdp.menu;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Menu extends MenuComponent {
 
-	private List<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
+	Iterator<MenuComponent> iterator = null;
+	List<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
 	private String name;
 	private String description;
 	
@@ -50,4 +52,11 @@ public class Menu extends MenuComponent {
 		}
 	}
 
+	@Override
+	public Iterator<MenuComponent> createIterator() {
+		if (iterator == null) {
+			iterator = new CompositeIterator(menuComponents.iterator());
+		}
+		return iterator;
+	}
 }

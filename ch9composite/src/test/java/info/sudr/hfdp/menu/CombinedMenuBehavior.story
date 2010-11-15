@@ -73,7 +73,7 @@ scenario "ask waitress to print menus", {
 		waitress = new Waitress(menus)
 	}
 	
-	when 'we ask to print the menus', { waitress.printMenu(); }
+	when 'we ask to print the vegetarian menu', { waitress.printVegetarianMenu(); }
 	
 	then 'we receive the menu', {
 	}

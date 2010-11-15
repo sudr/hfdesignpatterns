@@ -1,5 +1,7 @@
 package info.sudr.hfdp.menu;
 
+import java.util.Iterator;
+
 public abstract class MenuComponent {
 
 	public String getName() {
@@ -14,6 +16,10 @@ public abstract class MenuComponent {
 		throw new UnsupportedOperationException();
 	}
 
+	public boolean isVegetarian() {
+		throw new UnsupportedOperationException();
+	}
+	
 	public double isChild() {
 		throw new UnsupportedOperationException();
 	}
@@ -33,5 +39,7 @@ public abstract class MenuComponent {
 	public void print() {
 		throw new UnsupportedOperationException();
 	}
+
+	public abstract Iterator<MenuComponent> createIterator();
 
 }
