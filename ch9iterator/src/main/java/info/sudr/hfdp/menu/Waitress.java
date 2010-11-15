@@ -1,19 +1,20 @@
 package info.sudr.hfdp.menu;
 
-import info.sudr.hfdp.menu.app.DinerMenu;
-import info.sudr.hfdp.menu.app.PancakeHouseMenu;
-
 import java.util.Iterator;
+import java.util.List;
 
 public class Waitress {
 
+	private final List<Menu> menus;
+
+	public Waitress(List<Menu> menus) {
+		this.menus = menus;
+	}
+	
 	public void printMenu() {
-		Iterator<MenuItem> pancakeHouseMenuIterator = new PancakeHouseMenu().createIterator();
-		Iterator<MenuItem> dinerMenuIterator = new DinerMenu().createIterator();
-		System.out.println("MENU\n-----\nBREAKFAST");
-		printMenu(pancakeHouseMenuIterator);
-		System.out.println("\nLUNCH");
-		printMenu(dinerMenuIterator);
+		for (Menu m : menus) {
+			printMenu(m.createIterator());
+		}
 	}
 
 	private void printMenu(Iterator<MenuItem> menuIterator) {
