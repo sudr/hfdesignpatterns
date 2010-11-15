@@ -1,11 +1,16 @@
-package info.sudr.hfdp.menu;
+package info.sudr.hfdp.menu.app;
+
+import info.sudr.hfdp.menu.Menu;
+import info.sudr.hfdp.menu.MenuItem;
+
+import java.util.Iterator;
 
 
-public class DinerMenu {
+public class DinerMenu implements Menu {
 
-	static final int MAX_ITEMS = 6;
-	int numberOfItems = 0;
-	MenuItem[] menuItems;
+	private static final int MAX_ITEMS = 6;
+	private int numberOfItems = 0;
+	private MenuItem[] menuItems;
 	
 	public DinerMenu() {
 		menuItems = new MenuItem[MAX_ITEMS];
@@ -40,8 +45,9 @@ public class DinerMenu {
 			numberOfItems++;
 		}
 	}
-	
-	public MenuItem[] getMenuItems() {
-		return menuItems;
+
+	@Override
+	public Iterator<MenuItem> createIterator() {
+		return new DinerMenuIterator(menuItems);
 	}
 }

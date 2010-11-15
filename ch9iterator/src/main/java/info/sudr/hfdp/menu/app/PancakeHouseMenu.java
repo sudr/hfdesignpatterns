@@ -1,8 +1,12 @@
-package info.sudr.hfdp.menu;
+package info.sudr.hfdp.menu.app;
+
+import info.sudr.hfdp.menu.Menu;
+import info.sudr.hfdp.menu.MenuItem;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
 
 	ArrayList<MenuItem> menuItems;
 	
@@ -34,8 +38,9 @@ public class PancakeHouseMenu {
 		MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
 		menuItems.add(menuItem);
 	}
-	
-	public ArrayList<MenuItem> getMenuItems() {
-		return menuItems;
+
+	public Iterator<MenuItem> createIterator() {
+		return new PancakeHouseMenuIterator(menuItems);
 	}
+
 }
