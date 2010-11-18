@@ -4,6 +4,7 @@ import info.sudr.hfdp.gumball.state.HasQuarter;
 import info.sudr.hfdp.gumball.state.NoQuarter;
 import info.sudr.hfdp.gumball.state.Out;
 import info.sudr.hfdp.gumball.state.Sold;
+import info.sudr.hfdp.gumball.state.Winner;
 
 public class GumballMachine {
 
@@ -11,6 +12,7 @@ public class GumballMachine {
 	public static final State HAS_QUARTER = new HasQuarter();
 	public static final State SOLD = new Sold();
 	public static final State OUT = new Out();
+	public static final State WINNER = new Winner();
 
 	private State currentState;
 	private int count;
@@ -46,11 +48,12 @@ public class GumballMachine {
 	public void release() {
 		if (count > 0) {
 			count--;
-			System.out.println("released a gumball");
-			setState(NO_QUARTER);
 		} else {
 			System.out.println("error: no gumballs");
-			setState(OUT);
 		}
+	}
+	
+	public int count() {
+		return count;
 	}
 }
