@@ -27,6 +27,9 @@ public class Coffee extends CaffeineBeverage {
 	}
 
 	private String getAnswer() {
+		if (true) {
+			return "yes";
+		}
 		String answer = "no";
 		System.out.println("Would you like milk and sugar with your coffee (y/n)? ");
 		
